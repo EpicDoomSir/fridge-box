@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="/static/css/profile.css" >
+{% endblock %}
+
+{% block navbar %}
+{% include 'partials/navbar_homepage.html' %}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid" id="over">
+    <div class="row justify-content-center align-items-center" id="row">
+        <div class="card">
+            <div class="card-body">
+                <h3>Profile</h3>
+                <table>
+                    <tbody>
+                    <tr><td>username : {{ user.username }}</td></tr>
+                        <tr><td>First Name: {{ user.first_name }}</td></tr>
+                        <tr><td>Last Name: {{ user.last_name }}</td></tr>
+                        <tr><td>Email: {{ user.email }}</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

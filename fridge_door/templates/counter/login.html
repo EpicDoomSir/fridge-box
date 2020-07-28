@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="/static/css/signup.css" >
+{% endblock %}
+
+{% block navbar %}
+{% include 'partials/navbar_index.html' %}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid" id="over">
+    <div class="row justify-content-center align-items-center" id="row">
+        <div class="card mx-auto">
+            <div class="card-body" id="body-of-card">
+                <h2>Login</h2>
+                <form method="post">
+                  {% csrf_token %}
+                  {{ form.as_p }}
+                  <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% include 'partials/footer.html' %}
+{% endblock %}
